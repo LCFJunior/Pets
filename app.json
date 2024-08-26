@@ -11,6 +11,10 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "assetBundlePatterns": ["**/*"],
+    "fonts": {
+      "MyCustomFont": "./assets/fonts/MyFonts.ttf"
+    },
     "ios": {
       "supportsTablet": true
     },

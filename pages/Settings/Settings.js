@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import {
     Text,
     SafeAreaView,
-    View
+    View,
+    TouchableOpacity
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './SettingsStyle';
@@ -33,14 +34,18 @@ const Settings = () => {
 
                 <Text style={styles.sectionTitle}>Conta</Text>
                 <View style={styles.accountBox}>
-                    <View style={styles.lineItem}>
-                        <MatICON name="security" size={20} color="#000" />
-                        <Text style={styles.lineText}>Segurança</Text>
-                    </View>
-                    <View style={styles.lineItem}>
-                        <IoICON name="notifications-outline" size={20} color="#000" />
-                        <Text style={styles.lineText}>Notificações</Text>
-                    </View>
+                    <TouchableOpacity onPress={() => navigation.navigate('SecurityPage')}>
+                        <View style={styles.lineItem}>
+                            <MatICON name="security" size={20} color="#000" />
+                            <Text style={styles.lineText}>Segurança</Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
+                        <View style={styles.lineItem}>
+                            <IoICON name="notifications-outline" size={20} color="#000" />
+                            <Text style={styles.lineText}>Notificações</Text>
+                        </View>
+                    </TouchableOpacity>
                     <View style={styles.lineItem}>
                         <FonICON name="locked" size={20} color="#000" />
                         <Text style={styles.lineText}>Privacidade</Text>

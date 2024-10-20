@@ -10,6 +10,11 @@ import Pet from './pages/Pet/Pet';
 import Settings from './pages/Settings/Settings';
 import SecurityPage from './pages/Settings/Security/Securitypage'
 import Notification from './pages/Settings/Notification/Notification'
+import Privacity from './pages/Settings/Privacity/Privacity';
+import Profile from './pages/Profile/Profile';
+import Terms from './pages/Settings/Terms/Terms';
+import Delete from './pages/Profile/DeleteAccount/Delete';
+import Register from './pages/Pet/Register/Register';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,6 +47,11 @@ const App = () => {
           <Stack.Screen name="Settings" component={Settings} options={{ headerShown: false }} />
           <Stack.Screen name="SecurityPage" component={SecurityPage} options={{ headerShown: false }} />
           <Stack.Screen name="Notification" component={Notification} options={{ headerShown: false }} />
+          <Stack.Screen name="Privacity" component={Privacity} options={{ headerShown: false }} />
+          <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
+          <Stack.Screen name="Terms" component={Terms} options={{ headerShown: false }} />
+          <Stack.Screen name="Delete" component={Delete} options={{ headerShown: false }} />
+          <Stack.Screen name="Register" component={Register} options={{ headerShown: false }} />
         </Stack.Navigator>
       </View>
     </NavigationContainer>

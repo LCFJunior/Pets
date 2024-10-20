@@ -39,7 +39,7 @@ const Pet = () => {
                     <Text style={styles.petName}>Zoe</Text>
                 </View>
             </SafeAreaView>
-            <TouchableOpacity style={styles.addButton} onPress={() => alert('Adicionar Pet')}>
+            <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate('Register')}>
                 <Text style={styles.addText}>Adicionar Pet</Text>
             </TouchableOpacity>
             <SafeAreaView style={styles.tabBar}>

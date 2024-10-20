@@ -24,13 +24,18 @@ const Notifications = () => {
             <SafeAreaView style={styles.container}>
                 <ScrollView contentContainerStyle={styles.scrollContainer}>
                     <View style={styles.header}>
-                        <Text style={styles.headerText}>Notificações</Text>
+                        <Text 
+                        style={styles.headerText}
+                        paddingRight={25}
+                        >Notificações</Text>
                     </View>
                     <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backIcon}>
                         <IoICON name="chevron-back-outline" size={30} color="white" />
                     </TouchableOpacity>
-                    <Text style={styles.sectionMainTitle}>Notificações do app</Text>
-
+                    <Text 
+                    style={styles.sectionMainTitle}
+                    paddingRight={25}
+                    >Notificações do app</Text>
                     <Text style={styles.sectionTitle}>Avisos Promocionais</Text>
                     <View style={styles.switchContainer}>
                         <Text style={styles.switchText}>Permita receber avisos promocionais para acesso exclusivo a ofertas, descontos e novidades.</Text>
@@ -83,7 +88,11 @@ const Notifications = () => {
                         />
                     </View>
 
-                    <Text marginTop={15} style={styles.sectionMainTitle}>Notificações chat</Text>
+                    <Text 
+                    marginTop={15} 
+                    style={styles.sectionMainTitle}
+                    paddingRight={25}
+                    >Notificações chat</Text>
                     <Text style={styles.sectionTitle}>Desativar sons e vibrações</Text>
                     <View style={styles.switchContainer}>
                         <Text style={styles.switchText}>Desative sons e vibrações no chat para uma experiência de conversa discreta.</Text>
@@ -108,11 +117,15 @@ const Notifications = () => {
                             value={isEnabled}
                         />
                     </View>
-                    <Text marginTop={15} style={styles.sectionMainTitle}>Notificações do app</Text>
+                    <Text 
+                    marginTop={15}
+                    style={styles.sectionMainTitle}
+                    paddingRight={25}
+                    >Notificações do app</Text>
                     <Text style={styles.sectionTitle}>Redefinir Notificações</Text>
                     <View marginBottom={100} style={styles.switchContainer}>
                         <Text style={styles.switchText}>Utilizada para acessar sua conta</Text>
-                        <AntICON name="right" size={35} color="#bdbebd" />
+                        <AntICON name="right" size={35} color="#bdbebd" marginBottom={10}/>
                     </View>
                 </ScrollView>
             </SafeAreaView>

@@ -56,7 +56,7 @@ const Home = () => {
 
                 <View style={styles.sectionBody}>
                     <Pressable
-                        onPress={() => navigation.navigate('EditProfile')}
+                        onPress={() => navigation.navigate('Profile')}
                         style={styles.profile}
                     >
                         <Image

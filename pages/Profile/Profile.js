@@ -33,7 +33,7 @@ const Profile = () => {
         const getData = async () => {
             try {
                 const token = await AsyncStorage.getItem('token');
-                const response = await axios.post('http://192.168.15.11:5001/userdata', { token: token });
+                const response = await axios.post('http://192.168.15.9:5001/userdata', { token: token });
                 setUserData(response.data.data);
             } catch (error) {
                 console.error(error);

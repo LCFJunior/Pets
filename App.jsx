@@ -15,6 +15,8 @@ import Profile from './pages/Profile/Profile';
 import Terms from './pages/Settings/Terms/Terms';
 import Delete from './pages/Profile/DeleteAccount/Delete';
 import Register from './pages/Pet/Register/Register';
+import NewHistory from './pages/Pet/NewHistory/NewHistory';
+import History from './pages/Pet/History/History';
 
 const Stack = createNativeStackNavigator();
 
@@ -52,6 +54,8 @@ const App = () => {
           <Stack.Screen name="Terms" component={Terms} options={{ headerShown: false }} />
           <Stack.Screen name="Delete" component={Delete} options={{ headerShown: false }} />
           <Stack.Screen name="Register" component={Register} options={{ headerShown: false }} />
+          <Stack.Screen name="NewHistory" component={NewHistory} options={{ headerShown: false }} />
+          <Stack.Screen name="History" component={History} options={{ headerShown: false }} />
         </Stack.Navigator>
       </View>
     </NavigationContainer>

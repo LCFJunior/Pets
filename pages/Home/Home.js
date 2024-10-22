@@ -6,7 +6,8 @@ import {
     Pressable,
     Image,
     ActivityIndicator,
-    Alert
+    Alert,
+    TouchableOpacity
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './HomeStyle';
@@ -32,7 +33,7 @@ const Home = () => {
         const getData = async () => {
             try {
                 const token = await AsyncStorage.getItem('token');
-                const response = await axios.post('http://192.168.15.11:5001/userdata', { token: token });
+                const response = await axios.post('http://192.168.15.9:5001/userdata', { token: token });
                 setUserData(response.data.data);
             } catch (error) {
                 console.error(error);
@@ -82,15 +83,20 @@ const Home = () => {
                 </View>
 
                 <View style={styles.rectangleContainer}>
-                    <View style={styles.rectangle} backgroundColor="#004CF2">
+                    <TouchableOpacity style={[styles.rectangle, { backgroundColor: "#004CF2" }]}>
                         <Text style={styles.rectangleTitle}>Carteira de vacina</Text>
                         <Image source={rectangleImage1} style={styles.rectangleImage} />
-                    </View>
-                    <View style={styles.rectangle} backgroundColor="#FF5362">
+                    </TouchableOpacity>
+                    
+                    <TouchableOpacity
+                    style={[styles.rectangle, { backgroundColor: "#FF5362" }]}
+                    onPress={() => navigation.navigate('History')}
+                    >
                         <Text style={styles.rectangleTitle}>Histórico do Pet</Text>
                         <Image source={rectangleImage2} style={styles.rectangleImage} />
-                    </View>
+                    </TouchableOpacity>
                 </View>
+
             </SafeAreaView>
             <SafeAreaView style={styles.tabBar}>
                 <AntICON name='home' size={50} style={getTabIconStyle('Home')} marginTop={18} onPress={() => navigation.navigate('Home')} color="white"/>

@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Text,
-    SafeAreaView
+    SafeAreaView,
+    Image, // Importar o componente Image
+    View,
+    TouchableOpacity
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './NotificationsStyle';
@@ -19,10 +22,21 @@ const Notifications = () => {
         return route.name === tabName ? styles.tabIconActive : styles.tabIcon;
     };
 
-    return(
+    return (
         <LinearGradient colors={['#9C51FD', '#2B1240']} style={styles.container}>
             <SafeAreaView style={styles.container}>
-                <Text style={styles.title}>Notifications</Text>
+
+                {/* Conteúdo da imagem e texto centralizados */}
+                <View style={styles.centeredContent}>
+                    <Image 
+                        source={require('../../assets/Chatbot.png')} // Caminho da imagem
+                        style={styles.image}
+                    />
+                    <Text style={styles.text}>ChatBot IA</Text>
+                </View>
+                <TouchableOpacity style={styles.addButton}>
+                    <Text style={styles.addText}>‍🔧   MANUTENÇÃO ‍  🔧</Text>
+                </TouchableOpacity>
             </SafeAreaView>
             <SafeAreaView style={styles.tabBar}>
                 <AntICON name='home' size={50} style={getTabIconStyle('Home')} marginTop={18} onPress={() => navigation.navigate('Home')} color="white"/>
@@ -31,7 +45,7 @@ const Notifications = () => {
                 <OctICON name='gear' size={50} style={getTabIconStyle('Settings')} marginTop={18} onPress={() => navigation.navigate('Settings')} color="white"/>
             </SafeAreaView>
         </LinearGradient>
-    )
-}
+    );
+};
 
 export default Notifications;

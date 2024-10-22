@@ -11,6 +11,8 @@ const styles = StyleSheet.create({
     fontSize: 80,
     textAlign: 'center',
     color: '#fff',
+    textShadowRadius: 4,
+    textShadowColor: 'black'
   },
   tabBar: {
     flexDirection: 'row',

@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native"
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
       alignItems: 'center',
       padding: 16,
     },
@@ -27,5 +27,33 @@ const styles = StyleSheet.create({
       tabIconActive: {
         color: '#490092',
       },
+      text: {
+        fontSize : 50,
+        color: 'white', // Cor do texto
+        textAlign: "center",
+        top: '15%'
+    },
+    image: {
+      width: 320, // Largura da imagem
+      height: 500, // Altura da imagem
+      marginBottom: 20, // Espaçamento entre a imagem e o texto
+      top: '20%'
+  },
+  addButton: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    bottom: 0,
+    borderRadius: 20,
+    width: 450,
+    height: 60,
+    backgroundColor: '#490092',
+    marginTop: 150,
+    elevation: 4,
+    shadowColor: '#17C3CE59'
+  },
+  addText:{
+    fontSize: 30,
+    color: 'white',
+  },
 })
 export default styles

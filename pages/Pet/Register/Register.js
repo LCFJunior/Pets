@@ -48,7 +48,7 @@ const Register = () => {
                         <IoICON name="chevron-back-outline" size={40} color="white" />
                     </TouchableOpacity>
                     <Image
-                        source={userData && userData.profileImage ? { uri: `http://192.168.15.11:5001/${userData.profileImage.replace(/\\/g, '/')}` } : profilePick}
+                        source={userData && userData.profileImage ? { uri: `http://192.168.15.9:5001/${userData.profileImage.replace(/\\/g, '/')}` } : profilePick}
                         style={styles.profileAvatar}
                     />
                     <Text style={styles.label}>*Email</Text>
